@@ -25,10 +25,10 @@ urlpatterns = [
     path('admin/', admin.site.urls),
    # path('',appSaleViews.home ,name='home'), 
     path('', appSaleViews.index, name='index'),
-    path('about.html/',appSaleViews.about, name='about'),
-    path('house.html/',appSaleViews.house, name='house'),
-    path('price.html/',appSaleViews.price, name='price'),
-    path('contact.html/',appSaleViews.contact, name='contact'),
+    path('about/',appSaleViews.about, name='about'),
+    path('house/',appSaleViews.house, name='house'),
+    path('price/',appSaleViews.price, name='price'),
+    path('contact/',appSaleViews.contact, name='contact'),
 
     path('signup/',appSaleViews.signup, name='signup'),
 

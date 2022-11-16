@@ -2,7 +2,7 @@ from re import search
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.urls import path,include
-
+from appSale.models import housesale,Users,Price,House_Category
 # def home(request):
 #     return HttpResponse('<h1> Welcome to Home Page</h1>')
 
@@ -10,13 +10,17 @@ from django.urls import path,include
 
 
 def index(request):
-  return render(request, 'index.html')
+  house=housesale.objects.all()
+  price=Price.objects.all()
+  return render(request, 'index.html',{'house':house,'price':price}) 
 def about(request):
   return render(request, 'about.html')
 def house(request):
-  return render(request, 'house.html')
+  house=housesale.objects.all()
+  return render(request, 'house.html',{'house':house})
 def price(request):
-  return render(request, 'price.html')
+  price=Price.objects.all()
+  return render(request, 'price.html',{'price':price})
 def contact(request):
   return render(request, 'contact.html')
 

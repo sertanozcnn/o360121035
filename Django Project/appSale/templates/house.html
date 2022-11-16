@@ -94,86 +94,27 @@
           There are many variations of passages of Lorem Ipsum available, but the
         </p>
       </div>
+
       <div class="sale_container">
+        {% for h in house %}
         <div class="box">
           <div class="img-box">
-            <img src="{% static 'images/s-1.jpg'%}" alt=""> 
+            <img src="{{ h.housesale_image.url }}" alt=""> 
           </div>
           <div class="detail-box">
             <h6>
-              apertments house
+              {{ h.housesale_title }}
             </h6>
             <p>
-              There are many variations of passages of Lorem Ipsum available, but
+              {{ h.housesale_description }}
             </p>
           </div>
+
         </div>
-        <div class="box">
-          <div class="img-box">
-            <img src="{% static 'images/s-2.jpg'%}" alt=""> 
-          </div>
-          <div class="detail-box">
-            <h6>
-              apertments house
-            </h6>
-            <p>
-              There are many variations of passages of Lorem Ipsum available, but
-            </p>
-          </div>
-        </div>
-        <div class="box">
-          <div class="img-box">
-            <img src="{% static 'images/s-3.jpg'%}" alt=""> 
-          </div>
-          <div class="detail-box">
-            <h6>
-              apertments house
-            </h6>
-            <p>
-              There are many variations of passages of Lorem Ipsum available, but
-            </p>
-          </div>
-        </div>
-        <div class="box">
-          <div class="img-box"> 
-            <img src="{% static 'images/s-4.jpg'%}" alt=""> 
-          </div>
-          <div class="detail-box">
-            <h6>
-              apertments house
-            </h6>
-            <p>
-              There are many variations of passages of Lorem Ipsum available, but
-            </p>
-          </div>
-        </div>
-        <div class="box">
-          <div class="img-box">
-            <img src="{% static 'images/s-5.jpg'%}" alt=""> 
-          </div>
-          <div class="detail-box">
-            <h6>
-              apertments house
-            </h6>
-            <p>
-              There are many variations of passages of Lorem Ipsum available, but
-            </p>
-          </div>
-        </div>
-        <div class="box">
-          <div class="img-box">
-            <img src="{% static 'images/s-6.jpg'%}" alt=""> 
-          </div>
-          <div class="detail-box">
-            <h6>
-              apertments house
-            </h6>
-            <p>
-              There are many variations of passages of Lorem Ipsum available, but
-            </p>
-          </div>
-        </div>
+       {% endfor %}
       </div>
+
+
       <div class="btn-box">
         <a href="">
           Find More
